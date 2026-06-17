@@ -50,6 +50,6 @@ with mlflow.start_run():
     plt.savefig(confusion_matrix_path)
     mlflow.log_artifact(confusion_matrix_path)
     mlflow.log_artifact(__file__)
-    mlflow.set_tags({"author": "vikash", "project": "wine classification"})
+    mlflow.set_tags("author:vikash","project:wine classification")
     mlflow.sklearn.log_model(rf,"random forest model")
 print(accuracy)
